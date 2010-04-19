@@ -34,7 +34,7 @@
 	<distributionManagement>
 		<repository>
 			<id>Google code</id>
-			<url>dav:https://maven-googlecode-changes-plugin.googlecode.com/svn/maven2/releases</url>
+			<url>dav:https://maven-googlecode-changes-plugin.googlecode.com/hg/maven2/releases</url>
 		</repository>
 	</distributionManagement>
 
