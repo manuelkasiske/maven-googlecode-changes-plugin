@@ -9,8 +9,8 @@
     <version>1.0-SNAPSHOT</version>
 
     <name>Maven Googlecode changes support</name>
-	<inceptionYear>2010</inceptionYear>
-	<url>http://maven-googlecode-changes-plugin.googlecode.com</url>
+    <inceptionYear>2010</inceptionYear>
+    <url>http://maven-googlecode-changes-plugin.googlecode.com</url>
 
     <licenses>
         <license>
@@ -20,28 +20,33 @@
         </license>
     </licenses>
 
-	<scm>
-		<connection>scm:hg:http://maven-googlecode-changes-plugin.googlecode.com/hg/</connection>
-		<developerConnection>scm:hg:https://maven-googlecode-changes-plugin.googlecode.com/hg/</developerConnection>
-		<url>https://maven-googlecode-changes-plugin.googlecode.com/hg/</url>
-	</scm>
+    <scm>
+        <connection>scm:hg:http://maven-googlecode-changes-plugin.googlecode.com/hg/</connection>
+        <developerConnection>scm:hg:https://maven-googlecode-changes-plugin.googlecode.com/hg/</developerConnection>
+        <url>https://maven-googlecode-changes-plugin.googlecode.com/hg/</url>
+    </scm>
 
-	<issueManagement>
-		<system>Google code</system>
-		<url>http://code.google.com/p/maven-googlecode-changes-plugin/issues/list</url>
-	</issueManagement>
+    <issueManagement>
+        <system>Google code</system>
+        <url>http://code.google.com/p/maven-googlecode-changes-plugin/issues/list</url>
+    </issueManagement>
 
-	<distributionManagement>
-		<repository>
-			<id>Google code</id>
-			<url>dav:https://maven-googlecode-changes-plugin.googlecode.com/hg/maven2/releases</url>
-		</repository>
-	</distributionManagement>
+    <distributionManagement>
+        <repository>
+            <id>java.net-m2-repository</id>
+            <url>java-net:/maven2-repository/trunk/repository/</url>
+        </repository>
+    </distributionManagement>
 
     <repositories>
         <repository>
             <id>mandubian-mvn</id>
             <url>http://mandubian-mvn.googlecode.com/svn/trunk/mandubian-mvn/repository</url>
+        </repository>
+        <repository>
+            <id>maven2-repository.dev.java.net</id>
+            <name>Java.net Repository for Maven</name>
+            <url>http://download.java.net/maven/2/</url>
         </repository>
     </repositories>
 
@@ -110,6 +115,13 @@
                 </configuration>
             </plugin>
         </plugins>
+        <extensions>
+            <extension>
+                <groupId>org.jvnet.wagon-svn</groupId>
+                <artifactId>wagon-svn</artifactId>
+                <version>1.9</version>
+            </extension>
+        </extensions>
     </build>
 
     <reporting>
