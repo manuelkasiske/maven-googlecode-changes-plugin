@@ -6,7 +6,7 @@
     <groupId>com.googlecode</groupId>
     <artifactId>maven-googlecode-changes-plugin</artifactId>
     <packaging>maven-plugin</packaging>
-    <version>1.0</version>
+    <version>1.1-SNAPSHOT</version>
 
     <name>Maven Googlecode changes support</name>
     <inceptionYear>2010</inceptionYear>
