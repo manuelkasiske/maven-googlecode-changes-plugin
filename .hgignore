@@ -1,2 +1,9 @@
 syntax: glob
+*/target
+*/.classpath
+*/.project
+*/.settings
+.project
+.settings
 target
+build.xml
