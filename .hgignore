@@ -4,6 +4,7 @@ syntax: glob
 */.project
 */.settings
 .project
+.classpath
 .settings
 target
 build.xml
