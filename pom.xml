@@ -37,6 +37,10 @@
 			<id>java.net-m2-repository</id>
 			<url>java-net:/maven2-repository/trunk/repository/</url>
 		</repository>
+		<site>
+			<id>local</id>
+			<url>file:target/site-staged</url>
+		</site>
 	</distributionManagement>
 
 	<repositories>
@@ -107,12 +111,25 @@
 
 	<build>
 		<plugins>
-			<plugin>
+            <plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
 					<source>1.5</source>
 					<target>1.5</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-site-plugin</artifactId>
+				<version>3.0</version>
+				<configuration>
+					<reportPlugins>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-project-info-reports-plugin</artifactId>
+							<version>2.4</version>
+						</plugin>
+					</reportPlugins>
 				</configuration>
 			</plugin>
 		</plugins>
