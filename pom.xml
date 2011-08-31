@@ -130,6 +130,23 @@
 			<plugin>
 				<artifactId>maven-site-plugin</artifactId>
 				<version>3.0</version>
+				<dependencies>
+					<dependency>
+						<groupId>org.apache.maven.wagon</groupId>
+						<artifactId>wagon-scm</artifactId>
+						<version>1.0</version>
+					</dependency>
+					<dependency>
+						<groupId>org.apache.maven.scm</groupId>
+						<artifactId>maven-scm-api</artifactId>
+						<version>1.5</version>
+					</dependency>
+					<dependency>
+						<groupId>org.apache.maven.scm</groupId>
+						<artifactId>maven-scm-provider-hg</artifactId>
+						<version>1.5</version>
+					</dependency>
+				</dependencies>
 				<configuration>
 					<reportPlugins>
 						<plugin>
@@ -170,4 +187,16 @@
 		</plugins>
 	</reporting>
 
+	<profiles>
+		<profile>
+			<id>ci</id>
+
+			<distributionManagement>
+				<site>
+					<id>maven-googlecode-changes-plugin.googlecode.com</id>
+					<url>scm:hg:https://site.maven-googlecode-changes-plugin.googlecode.com/hg</url>
+				</site>
+			</distributionManagement>
+		</profile>
+	</profiles>
 </project>
