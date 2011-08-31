@@ -100,6 +100,14 @@
 
 	<developers>
 		<developer>
+			<name>Hakan Tandogan</name>
+			<email>hakan.tandogan@gmail.com</email>
+			<timezone>+1</timezone>
+			<roles>
+				<role>developer</role>
+			</roles>
+		</developer>
+		<developer>
 			<name>Julien Eluard</name>
 			<email>julien.eluard@gmail.com</email>
 			<timezone>+1</timezone>
