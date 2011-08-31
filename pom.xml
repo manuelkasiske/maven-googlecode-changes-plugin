@@ -132,6 +132,17 @@
 					</reportPlugins>
 				</configuration>
 			</plugin>
+            <plugin>
+                <artifactId>maven-plugin-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>generated-helpmojo</id>
+                        <goals>
+                            <goal>helpmojo</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
 		</plugins>
 		<extensions>
 			<extension>
