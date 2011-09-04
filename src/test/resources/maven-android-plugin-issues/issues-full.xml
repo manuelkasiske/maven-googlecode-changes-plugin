@@ -1,31 +1,421 @@
-<?xml version='1.0' encoding='UTF-8'?><feed xmlns='http://www.w3.org/2005/Atom' xmlns:openSearch='http://a9.com/-/spec/opensearch/1.1/' xmlns:gd='http://schemas.google.com/g/2005' xmlns:issues='http://schemas.google.com/projecthosting/issues/2009'><id>http://code.google.com/feeds/issues/p/maven-googlecode-changes-plugin/issues/full</id><updated>2011-09-04T13:08:13.446Z</updated><title>Issues - maven-googlecode-changes-plugin</title><subtitle>Issues - maven-googlecode-changes-plugin</subtitle><link rel='alternate' type='text/html' href='http://code.google.com/p/maven-googlecode-changes-plugin/issues/list'/><link rel='http://schemas.google.com/g/2005#feed' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-googlecode-changes-plugin/issues/full'/><link rel='http://schemas.google.com/g/2005#post' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-googlecode-changes-plugin/issues/full'/><link rel='self' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-googlecode-changes-plugin/issues/full?max-results=10'/><generator version='1.0' uri='http://code.google.com/feeds/issues'>ProjectHosting</generator><openSearch:totalResults>10</openSearch:totalResults><openSearch:startIndex>1</openSearch:startIndex><openSearch:itemsPerPage>10</openSearch:itemsPerPage><entry gd:etag='W/&quot;CkMERH47eCl7ImA9WxFXEU4.&quot;'><id>http://code.google.com/feeds/issues/p/maven-googlecode-changes-plugin/issues/full/1</id><published>2010-05-17T21:06:45.000Z</published><updated>2010-05-17T21:06:45.000Z</updated><title>fetching issue lst if a proxy is needed fails</title><content type='html'>&lt;b&gt;What steps will reproduce the problem?&lt;/b&gt;
-1. configure your network so that HTTP access is only possible with a proxy
-2. call &amp;quot;mvn -X com.googlecode:maven-googlecode-changes-plugin:create-report&amp;quot;
+<?xml version='1.0' encoding='UTF-8'?><feed xmlns='http://www.w3.org/2005/Atom' xmlns:openSearch='http://a9.com/-/spec/opensearch/1.1/' xmlns:gd='http://schemas.google.com/g/2005' xmlns:issues='http://schemas.google.com/projecthosting/issues/2009'><id>http://code.google.com/feeds/issues/p/maven-android-plugin/issues/full</id><updated>2011-09-04T13:10:34.218Z</updated><title>Issues - maven-android-plugin</title><subtitle>Issues - maven-android-plugin</subtitle><link rel='alternate' type='text/html' href='http://code.google.com/p/maven-android-plugin/issues/list'/><link rel='http://schemas.google.com/g/2005#feed' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-android-plugin/issues/full'/><link rel='http://schemas.google.com/g/2005#post' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-android-plugin/issues/full'/><link rel='self' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-android-plugin/issues/full?max-results=25'/><link rel='next' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-android-plugin/issues/full?start-index=26&amp;max-results=25'/><generator version='1.0' uri='http://code.google.com/feeds/issues'>ProjectHosting</generator><openSearch:totalResults>192</openSearch:totalResults><openSearch:startIndex>1</openSearch:startIndex><openSearch:itemsPerPage>25</openSearch:itemsPerPage><entry gd:etag='W/&quot;CEYGR347eCl7ImA9WxJWEkg.&quot;'><id>http://code.google.com/feeds/issues/p/maven-android-plugin/issues/full/1</id><published>2009-06-07T20:00:34.000Z</published><updated>2009-06-17T15:22:06.000Z</updated><title>Support Android SDK 1.5</title><content type='html'>&lt;b&gt;What steps will reproduce the problem?&lt;/b&gt;
+1. Download and install Android SDK 1.5
+2. Try using it with maven-android-plugin
 &lt;b&gt;3.&lt;/b&gt;
 
 &lt;b&gt;What is the expected output? What do you see instead?&lt;/b&gt;
+It should work.
 
-I would have expected that an issue list is downloaded and a changes.xml is
-created.
+It doesn't, because Android SDK directory structure has changed from 1.1 to
+1.5.
 
-What I am seeing is a java.net.HostNotFoundException...
+&lt;b&gt;What version of maven-android-plugin are you using?&lt;/b&gt;
+2.0.0-SNAPSHOT as of 2009-06-07.
 
-I am trying to come up with an fix, please see my mercurial clone at
+What is the output of &amp;quot;mvn -version&amp;quot; on your machine?
+Maven version: 2.0.10
+Java version: 1.6.0_13
+OS name: &amp;quot;linux&amp;quot; version: &amp;quot;2.6.28-11-generic&amp;quot; arch: &amp;quot;i386&amp;quot; Family: &amp;quot;unix&amp;quot;
 
-https://code.google.com/r/hakantandogan-googlecode-changes-proxy-support/
+</content><link rel='replies' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-android-plugin/issues/1/comments/full'/><link rel='alternate' type='text/html' href='http://code.google.com/p/maven-android-plugin/issues/detail?id=1'/><link rel='self' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-android-plugin/issues/full/1'/><author><name>hugo.josefson.old</name><uri>/u/hugo.josefson.old/</uri></author><issues:closedDate>2009-06-17T15:22:06.000Z</issues:closedDate><issues:id>1</issues:id><issues:label>Type-Enhancement</issues:label><issues:label>Priority-High</issues:label><issues:label>Milestone-2.0.0-alpha3</issues:label><issues:label>Component-Building</issues:label><issues:label>OpSys-All</issues:label><issues:label>Component-Standalone</issues:label><issues:owner><issues:uri>/u/hugo.josefson.old/</issues:uri><issues:username>hugo.josefson.old</issues:username></issues:owner><issues:stars>1</issues:stars><issues:state>closed</issues:state><issues:status>Verified</issues:status></entry><entry gd:etag='W/&quot;CEUESX47eCl7ImA9WxBTGE4.&quot;'><id>http://code.google.com/feeds/issues/p/maven-android-plugin/issues/full/2</id><published>2009-06-07T20:15:38.000Z</published><updated>2009-12-14T23:10:08.000Z</updated><title>Sign built apk with different keystore</title><content type='html'>Need a way to sign with a different keystore than the debug keystore.
+
+&lt;b&gt;What version of maven-android-plugin are you using?&lt;/b&gt;
+2.0.0-SNAPSHOT as of 2009-06-07.
+
+What is the output of &amp;quot;mvn -version&amp;quot; on your machine?
+Maven version: 2.0.10
+Java version: 1.6.0_13
+OS name: &amp;quot;linux&amp;quot; version: &amp;quot;2.6.28-11-generic&amp;quot; arch: &amp;quot;i386&amp;quot; Family: &amp;quot;unix&amp;quot;
+</content><link rel='replies' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-android-plugin/issues/2/comments/full'/><link rel='alternate' type='text/html' href='http://code.google.com/p/maven-android-plugin/issues/detail?id=2'/><link rel='self' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-android-plugin/issues/full/2'/><author><name>hugo.josefson.old</name><uri>/u/hugo.josefson.old/</uri></author><issues:blocking><issues:id>3</issues:id></issues:blocking><issues:id>2</issues:id><issues:label>Type-Enhancement</issues:label><issues:label>Priority-Medium</issues:label><issues:label>Component-Building</issues:label><issues:label>OpSys-All</issues:label><issues:label>Milestone-2.2.2</issues:label><issues:label>Component-Docs</issues:label><issues:owner><issues:uri>/u/hugo.josefson.old/</issues:uri><issues:username>hugo.josefson.old</issues:username></issues:owner><issues:stars>6</issues:stars><issues:state>closed</issues:state><issues:status>Fixed</issues:status></entry><entry gd:etag='W/&quot;CUcGQX47eCl7ImA9WxJbGEw.&quot;'><id>http://code.google.com/feeds/issues/p/maven-android-plugin/issues/full/3</id><published>2009-06-07T20:18:38.000Z</published><updated>2009-07-28T20:30:20.000Z</updated><title>Sign any apk file with different keystore</title><content type='html'>Need a way to sign any separate apk file.
+
+&lt;b&gt;What version of maven-android-plugin are you using?&lt;/b&gt;
+2.0.0-SNAPSHOT as of 2009-06-07.
+
+What is the output of &amp;quot;mvn -version&amp;quot; on your machine?
+Maven version: 2.0.10
+Java version: 1.6.0_13
+OS name: &amp;quot;linux&amp;quot; version: &amp;quot;2.6.28-11-generic&amp;quot; arch: &amp;quot;i386&amp;quot; Family: &amp;quot;unix&amp;quot;
+</content><link rel='replies' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-android-plugin/issues/3/comments/full'/><link rel='alternate' type='text/html' href='http://code.google.com/p/maven-android-plugin/issues/detail?id=3'/><link rel='self' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-android-plugin/issues/full/3'/><author><name>hugo.josefson.old</name><uri>/u/hugo.josefson.old/</uri></author><issues:blockedOn><issues:id>2</issues:id></issues:blockedOn><issues:id>3</issues:id><issues:label>Type-Enhancement</issues:label><issues:label>Priority-Low</issues:label><issues:label>OpSys-All</issues:label><issues:label>Component-Standalone</issues:label><issues:owner><issues:uri>/u/hugo.josefson.old/</issues:uri><issues:username>hugo.josefson.old</issues:username></issues:owner><issues:stars>5</issues:stars><issues:state>open</issues:state><issues:status>Accepted</issues:status></entry><entry gd:etag='W/&quot;Ak8FRn47eCl7ImA9WhdQFk0.&quot;'><id>http://code.google.com/feeds/issues/p/maven-android-plugin/issues/full/4</id><published>2009-06-07T20:34:34.000Z</published><updated>2011-08-17T19:20:17.000Z</updated><title>start/stop emulator (headless) from plugin</title><content type='html'>It would be nice to be able to start and stop an emulator from the
+maven-android-plugin. Then it could be automatically started/stopped
+before/after the platform tests.
+
+&lt;b&gt;What version of maven-android-plugin are you using?&lt;/b&gt;
+2.0.0-SNAPSHOT as of 2009-06-07.
+
+What is the output of &amp;quot;mvn -version&amp;quot; on your machine?
+Maven version: 2.0.10
+Java version: 1.6.0_13
+OS name: &amp;quot;linux&amp;quot; version: &amp;quot;2.6.28-11-generic&amp;quot; arch: &amp;quot;i386&amp;quot; Family: &amp;quot;unix&amp;quot;
+</content><link rel='replies' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-android-plugin/issues/4/comments/full'/><link rel='alternate' type='text/html' href='http://code.google.com/p/maven-android-plugin/issues/detail?id=4'/><link rel='self' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-android-plugin/issues/full/4'/><author><name>hugo.josefson.old</name><uri>/u/hugo.josefson.old/</uri></author><issues:id>4</issues:id><issues:label>Type-Enhancement</issues:label><issues:label>Priority-High</issues:label><issues:label>OpSys-Windows</issues:label><issues:label>Usability</issues:label><issues:label>Component-Standalone</issues:label><issues:stars>21</issues:stars><issues:state>open</issues:state><issues:status>Started</issues:status></entry><entry gd:etag='W/&quot;DkUMR347eCl7ImA9WxJWFU4.&quot;'><id>http://code.google.com/feeds/issues/p/maven-android-plugin/issues/full/5</id><published>2009-06-07T20:46:50.000Z</published><updated>2009-06-20T21:44:46.000Z</updated><title>add goalPrefix and document groupId shortcut in settings.xml</title><content type='html'>To run a specific goal in maven-android-plugin from command line, you have
+to type a long command, for example &amp;quot;mvn
+com.jayway.maven.plugins.android.generation2:maven-android-plugin:deploy&amp;quot;.
+
+It would be nice to be able to just type &amp;quot;mvn android:deploy&amp;quot;.
 
 
+&lt;b&gt;What version of maven-android-plugin are you using?&lt;/b&gt;
+2.0.0-SNAPSHOT as of 2009-06-07.
 
-</content><link rel='replies' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-googlecode-changes-plugin/issues/1/comments/full'/><link rel='alternate' type='text/html' href='http://code.google.com/p/maven-googlecode-changes-plugin/issues/detail?id=1'/><link rel='self' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-googlecode-changes-plugin/issues/full/1'/><author><name>hakan.tandogan</name><uri>/u/hakan.tandogan/</uri></author><issues:id>1</issues:id><issues:label>Type-Defect</issues:label><issues:label>Priority-Medium</issues:label><issues:stars>0</issues:stars><issues:state>open</issues:state><issues:status>New</issues:status></entry><entry gd:etag='W/&quot;A0MMQn47eCl7ImA9Wx5UEEo.&quot;'><id>http://code.google.com/feeds/issues/p/maven-googlecode-changes-plugin/issues/full/2</id><published>2010-10-14T18:04:43.000Z</published><updated>2010-10-14T18:04:43.000Z</updated><title>query.setLabel must use 'milestone' parameter</title><content type='html'>I have tagged issues with a milestone '2.1' and passed this value as milestone parameter.
+What is the output of &amp;quot;mvn -version&amp;quot; on your machine?
+Maven version: 2.0.10
+Java version: 1.6.0_13
+OS name: &amp;quot;linux&amp;quot; version: &amp;quot;2.6.28-11-generic&amp;quot; arch: &amp;quot;i386&amp;quot; Family: &amp;quot;unix&amp;quot;
+</content><link rel='replies' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-android-plugin/issues/5/comments/full'/><link rel='alternate' type='text/html' href='http://code.google.com/p/maven-android-plugin/issues/detail?id=5'/><link rel='self' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-android-plugin/issues/full/5'/><author><name>hugo.josefson.old</name><uri>/u/hugo.josefson.old/</uri></author><issues:closedDate>2009-06-20T21:44:46.000Z</issues:closedDate><issues:id>5</issues:id><issues:label>Type-Enhancement</issues:label><issues:label>Priority-High</issues:label><issues:label>OpSys-All</issues:label><issues:label>Usability</issues:label><issues:label>Milestone-2.0</issues:label><issues:label>Component-Standalone</issues:label><issues:owner><issues:uri>/u/hugo.josefson.old/</issues:uri><issues:username>hugo.josefson.old</issues:username></issues:owner><issues:stars>1</issues:stars><issues:state>closed</issues:state><issues:status>Verified</issues:status></entry><entry gd:etag='W/&quot;CEUGRH47eCl7ImA9WxJUFE4.&quot;'><id>http://code.google.com/feeds/issues/p/maven-android-plugin/issues/full/6</id><published>2009-06-07T20:50:15.000Z</published><updated>2009-07-12T20:57:05.000Z</updated><title>look over parameter names and expressions</title><content type='html'>Parameter names and expressions need to be consistent and easily
+understandable.</content><link rel='replies' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-android-plugin/issues/6/comments/full'/><link rel='alternate' type='text/html' href='http://code.google.com/p/maven-android-plugin/issues/detail?id=6'/><link rel='self' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-android-plugin/issues/full/6'/><author><name>hugo.josefson.old</name><uri>/u/hugo.josefson.old/</uri></author><issues:closedDate>2009-07-12T20:57:05.000Z</issues:closedDate><issues:id>6</issues:id><issues:label>Type-Enhancement</issues:label><issues:label>Priority-Critical</issues:label><issues:label>OpSys-All</issues:label><issues:label>Milestone-2.0.0-beta1</issues:label><issues:label>Usability</issues:label><issues:label>Component-Standalone</issues:label><issues:owner><issues:uri>/u/hugo.josefson.old/</issues:uri><issues:username>hugo.josefson.old</issues:username></issues:owner><issues:stars>1</issues:stars><issues:state>closed</issues:state><issues:status>Verified</issues:status></entry><entry gd:etag='W/&quot;CEcNRX47eCl7ImA9WxJUFkQ.&quot;'><id>http://code.google.com/feeds/issues/p/maven-android-plugin/issues/full/7</id><published>2009-06-07T20:56:29.000Z</published><updated>2009-07-15T21:08:14.000Z</updated><title>Support pulling Android SDK from maven repo</title><content type='html'>&lt;b&gt;What steps will reproduce the problem?&lt;/b&gt;
+1. Don't have an Android SDK installed and environment variable set up.
+2. Want to use maven-android-plugin on an automated system, for example
+continuous integration server such as Hudson http://hudson.dev.java.net
+with minimal preinstallation of tools like Android SDK.
+&lt;b&gt;3.&lt;/b&gt;
 
-In CreateReportMojo, line 106 the hard coded '1_0_RC' suffix must be replaced by the milstone parameter to get a filled IssuesFeed.
+&lt;b&gt;What is the expected output? What do you see instead?&lt;/b&gt;
+Maven-android-plugin should try downloading an Android SDK from a Maven
+repo automatically if no ANDROID_SDK environment variable is set. It doesn't.
+
+&lt;b&gt;What version of maven-android-plugin are you using?&lt;/b&gt;
+2.0.0-SNAPSHOT as of 2009-06-07.
+
+What is the output of &amp;quot;mvn -version&amp;quot; on your machine?
+Maven version: 2.0.10
+Java version: 1.6.0_13
+OS name: &amp;quot;linux&amp;quot; version: &amp;quot;2.6.28-11-generic&amp;quot; arch: &amp;quot;i386&amp;quot; Family: &amp;quot;unix&amp;quot;
+</content><link rel='replies' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-android-plugin/issues/7/comments/full'/><link rel='alternate' type='text/html' href='http://code.google.com/p/maven-android-plugin/issues/detail?id=7'/><link rel='self' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-android-plugin/issues/full/7'/><author><name>hugo.josefson.old</name><uri>/u/hugo.josefson.old/</uri></author><issues:id>7</issues:id><issues:label>Type-Enhancement</issues:label><issues:label>Priority-Low</issues:label><issues:label>OpSys-All</issues:label><issues:label>Component-Building</issues:label><issues:label>Usability</issues:label><issues:label>Component-Standalone</issues:label><issues:owner><issues:uri>/u/hugo.josefson.old/</issues:uri><issues:username>hugo.josefson.old</issues:username></issues:owner><issues:stars>5</issues:stars><issues:state>open</issues:state><issues:status>Accepted</issues:status></entry><entry gd:etag='W/&quot;CUQAQn47eCl7ImA9WxJWGU8.&quot;'><id>http://code.google.com/feeds/issues/p/maven-android-plugin/issues/full/8</id><published>2009-06-07T21:06:21.000Z</published><updated>2009-06-25T09:49:03.000Z</updated><title>convert mojo configuration to annotations</title><content type='html'>Would be more fun developing if mojo configuration was in annotations than
+trapped inside code comments.</content><link rel='replies' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-android-plugin/issues/8/comments/full'/><link rel='alternate' type='text/html' href='http://code.google.com/p/maven-android-plugin/issues/detail?id=8'/><link rel='self' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-android-plugin/issues/full/8'/><author><name>hugo.josefson.old</name><uri>/u/hugo.josefson.old/</uri></author><issues:closedDate>2009-06-25T09:49:03.000Z</issues:closedDate><issues:id>8</issues:id><issues:label>Type-Enhancement</issues:label><issues:label>Priority-Low</issues:label><issues:label>OpSys-All</issues:label><issues:label>Maintainability</issues:label><issues:label>Component-Docs</issues:label><issues:owner><issues:uri>/u/hugo.josefson.old/</issues:uri><issues:username>hugo.josefson.old</issues:username></issues:owner><issues:stars>1</issues:stars><issues:state>closed</issues:state><issues:status>WontFix</issues:status></entry><entry gd:etag='W/&quot;A0MAR347eCl7ImA9WxJXFE0.&quot;'><id>http://code.google.com/feeds/issues/p/maven-android-plugin/issues/full/9</id><published>2009-06-07T21:17:26.000Z</published><updated>2009-06-07T21:17:26.000Z</updated><title>Maven plugin should never modify anything but target</title><content type='html'>Other software might put R.java and java files generated from aidl files,
+into src/main/java, which is the wrong place to keep dynamically generated
+source code. Currently, maven-android-plugin works around that fact by
+deleting conflicting files.
+
+We should see if there is a way to not have to delete those files, and
+still work correctly.
 
 
-TODO: Replace
-   query.setLabel(CreateReportMojo.MILESTONE_LABEL + &amp;quot;1_0_RC&amp;quot;);
--&amp;gt; query.setLabel(CreateReportMojo.MILESTONE_LABEL + milestone);</content><link rel='replies' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-googlecode-changes-plugin/issues/2/comments/full'/><link rel='alternate' type='text/html' href='http://code.google.com/p/maven-googlecode-changes-plugin/issues/detail?id=2'/><link rel='self' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-googlecode-changes-plugin/issues/full/2'/><author><name>karsten....@googlemail.com</name><uri>/u/@UBRQRVZWABFNXwd1/</uri></author><issues:id>2</issues:id><issues:label>Type-Defect</issues:label><issues:label>Priority-Medium</issues:label><issues:stars>2</issues:stars><issues:state>open</issues:state><issues:status>New</issues:status></entry><entry gd:etag='W/&quot;A0QEQX47eCl7ImA9WhdXF0w.&quot;'><id>http://code.google.com/feeds/issues/p/maven-googlecode-changes-plugin/issues/full/3</id><published>2011-08-30T15:48:20.000Z</published><updated>2011-08-30T15:48:20.000Z</updated><title>The plugin should use itself to provide a working example of changes reports</title><content type='html'>See subject, use the plugin itself in the site report</content><link rel='replies' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-googlecode-changes-plugin/issues/3/comments/full'/><link rel='alternate' type='text/html' href='http://code.google.com/p/maven-googlecode-changes-plugin/issues/detail?id=3'/><link rel='self' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-googlecode-changes-plugin/issues/full/3'/><author><name>hakan.tandogan</name><uri>/u/hakan.tandogan/</uri></author><issues:id>3</issues:id><issues:label>Type-Enhancement</issues:label><issues:label>Priority-Medium</issues:label><issues:owner><issues:uri>/u/hakan.tandogan/</issues:uri><issues:username>hakan.tandogan</issues:username></issues:owner><issues:stars>1</issues:stars><issues:state>open</issues:state><issues:status>Accepted</issues:status></entry><entry gd:etag='W/&quot;CkUBQ347eCl7ImA9WhdXF08.&quot;'><id>http://code.google.com/feeds/issues/p/maven-googlecode-changes-plugin/issues/full/4</id><published>2011-08-30T15:50:46.000Z</published><updated>2011-08-30T16:04:12.000Z</updated><title>The project should have a maven site</title><content type='html'>There is no visible maven site.
+&lt;b&gt;What version of maven-android-plugin are you using?&lt;/b&gt;
+2.0.0-SNAPSHOT as of 2009-06-07.
 
-Create the necessary metadata in the pom, have the site generated (daily?) and deployed to googlecode
-</content><link rel='replies' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-googlecode-changes-plugin/issues/4/comments/full'/><link rel='alternate' type='text/html' href='http://code.google.com/p/maven-googlecode-changes-plugin/issues/detail?id=4'/><link rel='self' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-googlecode-changes-plugin/issues/full/4'/><author><name>hakan.tandogan</name><uri>/u/hakan.tandogan/</uri></author><issues:blocking><issues:id>6</issues:id></issues:blocking><issues:id>4</issues:id><issues:label>Type-Enhancement</issues:label><issues:label>Priority-Medium</issues:label><issues:owner><issues:uri>/u/hakan.tandogan/</issues:uri><issues:username>hakan.tandogan</issues:username></issues:owner><issues:stars>1</issues:stars><issues:state>open</issues:state><issues:status>Accepted</issues:status></entry><entry gd:etag='W/&quot;A0AAQn47eCl7ImA9WhdXGE8.&quot;'><id>http://code.google.com/feeds/issues/p/maven-googlecode-changes-plugin/issues/full/5</id><published>2011-08-30T16:02:32.000Z</published><updated>2011-08-31T22:29:03.000Z</updated><title>The plugin should have a "help" goal</title><content type='html'>see summary</content><link rel='replies' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-googlecode-changes-plugin/issues/5/comments/full'/><link rel='alternate' type='text/html' href='http://code.google.com/p/maven-googlecode-changes-plugin/issues/detail?id=5'/><link rel='self' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-googlecode-changes-plugin/issues/full/5'/><author><name>hakan.tandogan</name><uri>/u/hakan.tandogan/</uri></author><issues:closedDate>2011-08-31T22:29:03.000Z</issues:closedDate><issues:id>5</issues:id><issues:label>Type-Enhancement</issues:label><issues:label>Priority-Medium</issues:label><issues:owner><issues:uri>/u/hakan.tandogan/</issues:uri><issues:username>hakan.tandogan</issues:username></issues:owner><issues:stars>1</issues:stars><issues:state>closed</issues:state><issues:status>Fixed</issues:status></entry><entry gd:etag='W/&quot;A0EAQH47eCl7ImA9WhdXGE8.&quot;'><id>http://code.google.com/feeds/issues/p/maven-googlecode-changes-plugin/issues/full/6</id><published>2011-08-30T16:03:03.000Z</published><updated>2011-08-31T22:27:21.000Z</updated><title>The project maven site should be deployed to googlecode</title><content type='html'>see subject</content><link rel='replies' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-googlecode-changes-plugin/issues/6/comments/full'/><link rel='alternate' type='text/html' href='http://code.google.com/p/maven-googlecode-changes-plugin/issues/detail?id=6'/><link rel='self' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-googlecode-changes-plugin/issues/full/6'/><author><name>hakan.tandogan</name><uri>/u/hakan.tandogan/</uri></author><issues:blockedOn><issues:id>4</issues:id></issues:blockedOn><issues:closedDate>2011-08-31T22:27:21.000Z</issues:closedDate><issues:id>6</issues:id><issues:label>Type-Defect</issues:label><issues:label>Priority-Medium</issues:label><issues:owner><issues:uri>/u/hakan.tandogan/</issues:uri><issues:username>hakan.tandogan</issues:username></issues:owner><issues:stars>1</issues:stars><issues:state>closed</issues:state><issues:status>Done</issues:status></entry><entry gd:etag='W/&quot;A08DRX47eCl7ImA9WhdXF0o.&quot;'><id>http://code.google.com/feeds/issues/p/maven-googlecode-changes-plugin/issues/full/7</id><published>2011-08-31T08:36:26.000Z</published><updated>2011-08-31T08:37:54.000Z</updated><title>The plugin should be deployed to maven central via oss.sonatype.org</title><content type='html'>see subject</content><link rel='replies' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-googlecode-changes-plugin/issues/7/comments/full'/><link rel='alternate' type='text/html' href='http://code.google.com/p/maven-googlecode-changes-plugin/issues/detail?id=7'/><link rel='self' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-googlecode-changes-plugin/issues/full/7'/><author><name>hakan.tandogan</name><uri>/u/hakan.tandogan/</uri></author><issues:id>7</issues:id><issues:label>Type-Enhancement</issues:label><issues:label>Priority-Medium</issues:label><issues:owner><issues:uri>/u/hakan.tandogan/</issues:uri><issues:username>hakan.tandogan</issues:username></issues:owner><issues:stars>1</issues:stars><issues:state>open</issues:state><issues:status>Accepted</issues:status></entry><entry gd:etag='W/&quot;C0AAQ347eCl7ImA9WhdXGEU.&quot;'><id>http://code.google.com/feeds/issues/p/maven-googlecode-changes-plugin/issues/full/8</id><published>2011-09-01T12:55:42.000Z</published><updated>2011-09-01T12:55:42.000Z</updated><title>gdata and gproject not on maven central, deprecate dependence on them</title><content type='html'>the gdata and gproject artifacts are fetched from the mandubian repository instead of the official project. Unfortunately, the mandubian repo is unlikely to be replicated to maven central or be updated with the current versions, so either create a location for the current library ourselves or recreate the gproject logic ourselves.</content><link rel='replies' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-googlecode-changes-plugin/issues/8/comments/full'/><link rel='alternate' type='text/html' href='http://code.google.com/p/maven-googlecode-changes-plugin/issues/detail?id=8'/><link rel='self' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-googlecode-changes-plugin/issues/full/8'/><author><name>hakan.tandogan</name><uri>/u/hakan.tandogan/</uri></author><issues:id>8</issues:id><issues:label>Type-Defect</issues:label><issues:label>Priority-High</issues:label><issues:owner><issues:uri>/u/hakan.tandogan/</issues:uri><issues:username>hakan.tandogan</issues:username></issues:owner><issues:stars>0</issues:stars><issues:state>open</issues:state><issues:status>New</issues:status></entry><entry gd:etag='W/&quot;DUMCR347eCl7ImA9WhdXGUk.&quot;'><id>http://code.google.com/feeds/issues/p/maven-googlecode-changes-plugin/issues/full/9</id><published>2011-09-02T07:11:06.000Z</published><updated>2011-09-02T07:11:06.000Z</updated><title>Merge generated changes.xml with manually written one</title><content type='html'>It should be possible to have manually created and automatic content in one changes report</content><link rel='replies' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-googlecode-changes-plugin/issues/9/comments/full'/><link rel='alternate' type='text/html' href='http://code.google.com/p/maven-googlecode-changes-plugin/issues/detail?id=9'/><link rel='self' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-googlecode-changes-plugin/issues/full/9'/><author><name>hakan.tandogan</name><uri>/u/hakan.tandogan/</uri></author><issues:id>9</issues:id><issues:label>Type-Enhancement</issues:label><issues:label>Priority-Medium</issues:label><issues:owner><issues:uri>/u/hakan.tandogan/</issues:uri><issues:username>hakan.tandogan</issues:username></issues:owner><issues:stars>1</issues:stars><issues:state>open</issues:state><issues:status>New</issues:status></entry><entry gd:etag='W/&quot;A0YERH47eCl7ImA9WhdWEU4.&quot;'><id>http://code.google.com/feeds/issues/p/maven-googlecode-changes-plugin/issues/full/10</id><published>2011-09-04T12:25:05.000Z</published><updated>2011-09-04T12:25:05.000Z</updated><title>The generated changes.xml should not overwrite manually written one</title><content type='html'>with the default configuration, the changes.xml is generated into ${basedir}/src/changes. The src directory is usually used for manually created files, so this is slightly unexpected.
+What is the output of &amp;quot;mvn -version&amp;quot; on your machine?
+Maven version: 2.0.10
+Java version: 1.6.0_13
+OS name: &amp;quot;linux&amp;quot; version: &amp;quot;2.6.28-11-generic&amp;quot; arch: &amp;quot;i386&amp;quot; Family: &amp;quot;unix&amp;quot;
+</content><link rel='replies' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-android-plugin/issues/9/comments/full'/><link rel='alternate' type='text/html' href='http://code.google.com/p/maven-android-plugin/issues/detail?id=9'/><link rel='self' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-android-plugin/issues/full/9'/><author><name>hugo.josefson.old</name><uri>/u/hugo.josefson.old/</uri></author><issues:id>9</issues:id><issues:label>Type-Enhancement</issues:label><issues:label>Priority-Low</issues:label><issues:label>OpSys-All</issues:label><issues:label>Component-Building</issues:label><issues:label>Usability</issues:label><issues:owner><issues:uri>/u/hugo.josefson.old/</issues:uri><issues:username>hugo.josefson.old</issues:username></issues:owner><issues:stars>4</issues:stars><issues:state>open</issues:state><issues:status>Accepted</issues:status></entry><entry gd:etag='W/&quot;CUMNSH47eCl7ImA9WxJVGUs.&quot;'><id>http://code.google.com/feeds/issues/p/maven-android-plugin/issues/full/10</id><published>2009-06-07T21:26:21.000Z</published><updated>2009-07-07T10:44:59.000Z</updated><title>synchronize to maven central</title><content type='html'>Set up synchronization to maven central, so that users won't have to add
+our maven repo to their configuraion.
 
-Additionally, the proper configuration of the maven-changes-plugin to cope with this needs to be documented in the site docu</content><link rel='replies' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-googlecode-changes-plugin/issues/10/comments/full'/><link rel='alternate' type='text/html' href='http://code.google.com/p/maven-googlecode-changes-plugin/issues/detail?id=10'/><link rel='self' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-googlecode-changes-plugin/issues/full/10'/><author><name>hakan.tandogan</name><uri>/u/hakan.tandogan/</uri></author><issues:id>10</issues:id><issues:label>Type-Defect</issues:label><issues:label>Priority-High</issues:label><issues:owner><issues:uri>/u/hakan.tandogan/</issues:uri><issues:username>hakan.tandogan</issues:username></issues:owner><issues:stars>1</issues:stars><issues:state>open</issues:state><issues:status>Accepted</issues:status></entry></feed>
+http://maven.apache.org/guides/mini/guide-central-repository-upload.html</content><link rel='replies' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-android-plugin/issues/10/comments/full'/><link rel='alternate' type='text/html' href='http://code.google.com/p/maven-android-plugin/issues/detail?id=10'/><link rel='self' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-android-plugin/issues/full/10'/><author><name>hugo.josefson.old</name><uri>/u/hugo.josefson.old/</uri></author><issues:closedDate>2009-07-07T10:44:59.000Z</issues:closedDate><issues:id>10</issues:id><issues:label>Type-Task</issues:label><issues:label>Priority-High</issues:label><issues:label>OpSys-All</issues:label><issues:label>Milestone-2.0</issues:label><issues:label>Usability</issues:label><issues:label>Component-Infrastructure</issues:label><issues:owner><issues:uri>/u/hugo.josefson.old/</issues:uri><issues:username>hugo.josefson.old</issues:username></issues:owner><issues:stars>1</issues:stars><issues:state>closed</issues:state><issues:status>Verified</issues:status></entry><entry gd:etag='W/&quot;C08NRX47eCl7ImA9WxJXFEg.&quot;'><id>http://code.google.com/feeds/issues/p/maven-android-plugin/issues/full/11</id><published>2009-06-08T07:05:39.000Z</published><updated>2009-06-08T09:04:54.000Z</updated><title>Move m2repo urls to root of svn</title><content type='html'>trunk should not be part of the m2repo urls.</content><link rel='replies' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-android-plugin/issues/11/comments/full'/><link rel='alternate' type='text/html' href='http://code.google.com/p/maven-android-plugin/issues/detail?id=11'/><link rel='self' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-android-plugin/issues/full/11'/><author><name>hugo.josefson.old</name><uri>/u/hugo.josefson.old/</uri></author><issues:closedDate>2009-06-08T09:04:54.000Z</issues:closedDate><issues:id>11</issues:id><issues:label>Type-Task</issues:label><issues:label>Priority-High</issues:label><issues:label>OpSys-All</issues:label><issues:label>Component-Infrastructure</issues:label><issues:label>Milestone-1.0.1</issues:label><issues:label>Maintainability</issues:label><issues:owner><issues:uri>/u/hugo.josefson.old/</issues:uri><issues:username>hugo.josefson.old</issues:username></issues:owner><issues:stars>1</issues:stars><issues:state>closed</issues:state><issues:status>Verified</issues:status></entry><entry gd:etag='W/&quot;DkMMQ347eCl7ImA9WxJXFEg.&quot;'><id>http://code.google.com/feeds/issues/p/maven-android-plugin/issues/full/12</id><published>2009-06-08T07:25:45.000Z</published><updated>2009-06-08T09:48:02.000Z</updated><title>Write GettingStarted wiki page</title><content type='html'>Write GettingStarted wiki page</content><link rel='replies' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-android-plugin/issues/12/comments/full'/><link rel='alternate' type='text/html' href='http://code.google.com/p/maven-android-plugin/issues/detail?id=12'/><link rel='self' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-android-plugin/issues/full/12'/><author><name>hugo.josefson.old</name><uri>/u/hugo.josefson.old/</uri></author><issues:closedDate>2009-06-08T09:48:02.000Z</issues:closedDate><issues:id>12</issues:id><issues:label>Type-Task</issues:label><issues:label>Priority-Medium</issues:label><issues:label>OpSys-All</issues:label><issues:label>Component-Docs</issues:label><issues:label>Usability</issues:label><issues:label>Milestone-2.0.0-beta1</issues:label><issues:owner><issues:uri>/u/hugo.josefson.old/</issues:uri><issues:username>hugo.josefson.old</issues:username></issues:owner><issues:stars>1</issues:stars><issues:state>closed</issues:state><issues:status>Verified</issues:status></entry><entry gd:etag='W/&quot;CkcHR347eCl7ImA9WxJXFEs.&quot;'><id>http://code.google.com/feeds/issues/p/maven-android-plugin/issues/full/13</id><published>2009-06-08T07:27:00.000Z</published><updated>2009-06-08T11:20:36.000Z</updated><title>Write front page</title><content type='html'>Write front page with links to for example GettingStarted</content><link rel='replies' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-android-plugin/issues/13/comments/full'/><link rel='alternate' type='text/html' href='http://code.google.com/p/maven-android-plugin/issues/detail?id=13'/><link rel='self' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-android-plugin/issues/full/13'/><author><name>hugo.josefson.old</name><uri>/u/hugo.josefson.old/</uri></author><issues:closedDate>2009-06-08T11:20:36.000Z</issues:closedDate><issues:id>13</issues:id><issues:label>Type-Task</issues:label><issues:label>Priority-Medium</issues:label><issues:label>Component-Docs</issues:label><issues:label>Usability</issues:label><issues:label>Milestone-2.0.0-beta1</issues:label><issues:owner><issues:uri>/u/hugo.josefson.old/</issues:uri><issues:username>hugo.josefson.old</issues:username></issues:owner><issues:stars>1</issues:stars><issues:state>closed</issues:state><issues:status>Verified</issues:status></entry><entry gd:etag='W/&quot;A0AMRH47eCl7ImA9WxJXGE4.&quot;'><id>http://code.google.com/feeds/issues/p/maven-android-plugin/issues/full/14</id><published>2009-06-08T07:31:07.000Z</published><updated>2009-06-12T20:49:45.000Z</updated><title>Release 1.0.1 including source:jar and javadoc:jar</title><content type='html'>Release 1.0.1 including source:jar and javadoc:jar</content><link rel='replies' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-android-plugin/issues/14/comments/full'/><link rel='alternate' type='text/html' href='http://code.google.com/p/maven-android-plugin/issues/detail?id=14'/><link rel='self' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-android-plugin/issues/full/14'/><author><name>hugo.josefson.old</name><uri>/u/hugo.josefson.old/</uri></author><issues:closedDate>2009-06-12T20:49:45.000Z</issues:closedDate><issues:id>14</issues:id><issues:label>Type-Task</issues:label><issues:label>Priority-Critical</issues:label><issues:label>OpSys-All</issues:label><issues:label>Milestone-1.0.1</issues:label><issues:label>Component-Infrastructure</issues:label><issues:owner><issues:uri>/u/hugo.josefson.old/</issues:uri><issues:username>hugo.josefson.old</issues:username></issues:owner><issues:stars>1</issues:stars><issues:state>closed</issues:state><issues:status>Verified</issues:status></entry><entry gd:etag='W/&quot;A0ANRn47eCl7ImA9WxJXGE4.&quot;'><id>http://code.google.com/feeds/issues/p/maven-android-plugin/issues/full/15</id><published>2009-06-08T07:32:00.000Z</published><updated>2009-06-12T20:49:57.000Z</updated><title>Release 2.0.0-alpha1 including site, source:jar, javadoc:jar</title><content type='html'>Release 2.0.0-alpha1 including site, source:jar, javadoc:jar</content><link rel='replies' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-android-plugin/issues/15/comments/full'/><link rel='alternate' type='text/html' href='http://code.google.com/p/maven-android-plugin/issues/detail?id=15'/><link rel='self' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-android-plugin/issues/full/15'/><author><name>hugo.josefson.old</name><uri>/u/hugo.josefson.old/</uri></author><issues:closedDate>2009-06-12T20:49:57.000Z</issues:closedDate><issues:id>15</issues:id><issues:label>Type-Task</issues:label><issues:label>Priority-Critical</issues:label><issues:label>OpSys-All</issues:label><issues:label>Milestone-2.0.0-alpha1</issues:label><issues:label>Component-Infrastructure</issues:label><issues:owner><issues:uri>/u/hugo.josefson.old/</issues:uri><issues:username>hugo.josefson.old</issues:username></issues:owner><issues:stars>1</issues:stars><issues:state>closed</issues:state><issues:status>Verified</issues:status></entry><entry gd:etag='W/&quot;CUUDSX47eCl7ImA9WxJWFU4.&quot;'><id>http://code.google.com/feeds/issues/p/maven-android-plugin/issues/full/16</id><published>2009-06-08T07:33:23.000Z</published><updated>2009-06-20T21:27:58.000Z</updated><title>Add site, source:jar, javadoc:jar to release configuration</title><content type='html'>Add site, source:jar, javadoc:jar to release configuration in pom.xml.</content><link rel='replies' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-android-plugin/issues/16/comments/full'/><link rel='alternate' type='text/html' href='http://code.google.com/p/maven-android-plugin/issues/detail?id=16'/><link rel='self' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-android-plugin/issues/full/16'/><author><name>hugo.josefson.old</name><uri>/u/hugo.josefson.old/</uri></author><issues:closedDate>2009-06-20T21:27:58.000Z</issues:closedDate><issues:id>16</issues:id><issues:label>Type-Enhancement</issues:label><issues:label>Priority-High</issues:label><issues:label>OpSys-All</issues:label><issues:label>Milestone-2.0.0-alpha4</issues:label><issues:label>Component-Infrastructure</issues:label><issues:label>Maintainability</issues:label><issues:owner><issues:uri>/u/hugo.josefson.old/</issues:uri><issues:username>hugo.josefson.old</issues:username></issues:owner><issues:stars>1</issues:stars><issues:state>closed</issues:state><issues:status>Verified</issues:status></entry><entry gd:etag='W/&quot;CUUCQX47eCl7ImA9WxJWFUU.&quot;'><id>http://code.google.com/feeds/issues/p/maven-android-plugin/issues/full/17</id><published>2009-06-09T09:37:27.000Z</published><updated>2009-06-21T11:21:00.000Z</updated><title>Can't find aapt</title><content type='html'>&lt;b&gt;What steps will reproduce the problem?&lt;/b&gt;
+1. Build a maven project.
+&lt;b&gt;2.&lt;/b&gt;
+&lt;b&gt;3.&lt;/b&gt;
+
+&lt;b&gt;What is the expected output? What do you see instead?&lt;/b&gt;
+When aapt is executed maven says:
+
+[INFO] null/tools/aapt [package, -m, -J, 
+C:\java\appstore\trunk\client\android\app\target\generated-sources\r, -M, 
+C:\java\appstore\trunk\client\android\app\AndroidManifest.xml, -S, 
+C:\java\appstore\trunk\client\android\app\res, -I, c:\Documents and 
+Settings\Albin\.m2\repository\android\android\1.1_r1\android-1.1_r1.jar]
+
+I have the ANDROID_HOME variable set correctly, but the plugin apparently 
+ignores it.
+
+
+&lt;b&gt;What version of maven-android-plugin are you using?&lt;/b&gt;
+2.0.0-alpha1
+
+What is the output of &amp;quot;mvn -version&amp;quot; on your machine?
+Maven version: 2.0.9
+Java version: 1.6.0_11
+OS name: &amp;quot;windows xp&amp;quot; version: &amp;quot;5.1&amp;quot; arch: &amp;quot;x86&amp;quot; Family: &amp;quot;windows&amp;quot;
+
+&lt;b&gt;Please provide any additional information below.&lt;/b&gt;
+
+</content><link rel='replies' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-android-plugin/issues/17/comments/full'/><link rel='alternate' type='text/html' href='http://code.google.com/p/maven-android-plugin/issues/detail?id=17'/><link rel='self' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-android-plugin/issues/full/17'/><author><name>albin.th...@gmail.com</name><uri>/u/@UhJXRlVXBBhHWwh6/</uri></author><issues:closedDate>2009-06-21T11:21:00.000Z</issues:closedDate><issues:id>17</issues:id><issues:label>Type-Defect</issues:label><issues:label>Priority-High</issues:label><issues:label>OpSys-Windows</issues:label><issues:label>Milestone-2.0.0-alpha2</issues:label><issues:label>Component-Building</issues:label><issues:stars>2</issues:stars><issues:state>closed</issues:state><issues:status>Verified</issues:status></entry><entry gd:etag='W/&quot;A0IDQX47eCl7ImA9WxJXGE4.&quot;'><id>http://code.google.com/feeds/issues/p/maven-android-plugin/issues/full/18</id><published>2009-06-11T12:57:18.000Z</published><updated>2009-06-12T20:46:10.000Z</updated><title>can't do mvn release easily</title><content type='html'>&lt;b&gt;What steps will reproduce the problem?&lt;/b&gt;
+1. Try releasing everything with maven.
+&lt;b&gt;2.&lt;/b&gt;
+&lt;b&gt;3.&lt;/b&gt;
+
+&lt;b&gt;What is the expected output? What do you see instead?&lt;/b&gt;
+It should just work.
+The samples can't be released at the same time as the plugin, because they
+require it to be built first. Having the plugin and samples directories in
+the same git repo (but still subdirectories, and no root pom) doesn't work
+either.
+
+
+What is the output of &amp;quot;mvn -version&amp;quot; on your machine?
+Maven version: 2.0.10
+Java version: 1.6.0_13
+OS name: &amp;quot;linux&amp;quot; version: &amp;quot;2.6.28-11-generic&amp;quot; arch: &amp;quot;i386&amp;quot; Family: &amp;quot;unix&amp;quot;
+
+
+&lt;b&gt;Please use labels and text to provide additional information.&lt;/b&gt;
+</content><link rel='replies' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-android-plugin/issues/18/comments/full'/><link rel='alternate' type='text/html' href='http://code.google.com/p/maven-android-plugin/issues/detail?id=18'/><link rel='self' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-android-plugin/issues/full/18'/><author><name>hugo.josefson.old</name><uri>/u/hugo.josefson.old/</uri></author><issues:closedDate>2009-06-12T20:46:10.000Z</issues:closedDate><issues:id>18</issues:id><issues:label>Type-Defect</issues:label><issues:label>Priority-High</issues:label><issues:label>Milestone-2.0.0-alpha2</issues:label><issues:label>Maintainability</issues:label><issues:label>Component-Infrastructure</issues:label><issues:label>OpSys-Linux</issues:label><issues:owner><issues:uri>/u/hugo.josefson.old/</issues:uri><issues:username>hugo.josefson.old</issues:username></issues:owner><issues:stars>1</issues:stars><issues:state>closed</issues:state><issues:status>Verified</issues:status></entry><entry gd:etag='W/&quot;CUYBSH47eCl7ImA9WxJWFU4.&quot;'><id>http://code.google.com/feeds/issues/p/maven-android-plugin/issues/full/19</id><published>2009-06-12T20:48:31.000Z</published><updated>2009-06-20T21:25:59.000Z</updated><title>Create DeploymentInstructions wiki page</title><content type='html'>There are some notes in Issue 18.
+
+Use http://code.google.com/p/onejar-maven-plugin/wiki/DeployerInstructions
+as template, because it's mostly the same.</content><link rel='replies' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-android-plugin/issues/19/comments/full'/><link rel='alternate' type='text/html' href='http://code.google.com/p/maven-android-plugin/issues/detail?id=19'/><link rel='self' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-android-plugin/issues/full/19'/><author><name>hugo.josefson.old</name><uri>/u/hugo.josefson.old/</uri></author><issues:closedDate>2009-06-20T21:25:59.000Z</issues:closedDate><issues:id>19</issues:id><issues:label>Type-Task</issues:label><issues:label>Priority-Low</issues:label><issues:label>Component-Docs</issues:label><issues:label>Maintainability</issues:label><issues:label>Milestone-2.0.0-alpha4</issues:label><issues:owner><issues:uri>/u/hugo.josefson.old/</issues:uri><issues:username>hugo.josefson.old</issues:username></issues:owner><issues:stars>1</issues:stars><issues:state>closed</issues:state><issues:status>Verified</issues:status></entry><entry gd:etag='W/&quot;C0MARX47eCl7ImA9WxBSEEU.&quot;'><id>http://code.google.com/feeds/issues/p/maven-android-plugin/issues/full/20</id><published>2009-06-17T15:54:53.000Z</published><updated>2009-12-17T20:24:04.000Z</updated><title>Infer android.sdk.platform from existing config files</title><content type='html'>Can we look at the &amp;quot;uses-sdk&amp;quot; tag in AndroidManifest.xml, and from that 
+understand what the value should be for android.sdk.platform, if the user 
+has not set it?
+
+Then they would really only need to configure one thing in one place:
+1. android.sdk.path in pom.xml
+2. platform a.k.a. uses-sdk in AndroidManifest.xml
+
+The mapping would look like this with a normal Android SDK 1.5 from Google:
+
+Android SDK 1.0 = 1
+Android SDK 1.1 = 2
+Android SDK 1.5 = 3
+
+
+&lt;b&gt;What version of maven-android-plugin are you using?&lt;/b&gt;
+2.0.0-alpha3
+</content><link rel='replies' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-android-plugin/issues/20/comments/full'/><link rel='alternate' type='text/html' href='http://code.google.com/p/maven-android-plugin/issues/detail?id=20'/><link rel='self' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-android-plugin/issues/full/20'/><author><name>hugo.josefson.old</name><uri>/u/hugo.josefson.old/</uri></author><issues:id>20</issues:id><issues:label>Type-Enhancement</issues:label><issues:label>Priority-Low</issues:label><issues:label>OpSys-All</issues:label><issues:label>Milestone-2.4.0</issues:label><issues:label>Component-Building</issues:label><issues:label>Usability</issues:label><issues:owner><issues:uri>/u/hugo.josefson.old/</issues:uri><issues:username>hugo.josefson.old</issues:username></issues:owner><issues:stars>19</issues:stars><issues:state>open</issues:state><issues:status>Accepted</issues:status></entry><entry gd:etag='W/&quot;CUYMQn47eCl7ImA9WxJWFU4.&quot;'><id>http://code.google.com/feeds/issues/p/maven-android-plugin/issues/full/21</id><published>2009-06-18T19:34:08.000Z</published><updated>2009-06-20T21:26:23.000Z</updated><title>Can't run standalone goals (without pom)</title><content type='html'>&lt;b&gt;What steps will reproduce the problem?&lt;/b&gt;
+1. Get an apk to your hard drive somehow, for example by building one of 
+the samples: See wiki page Samples.
+2. Make sure the maven-android-plugin is in your local ~/.m2/repository, 
+for example by building one of the samples in step 1, which will cause it 
+to get downloaded. (When the synk to Maven Central is complete, this step 
+would not be needed.)
+3. Go to a directory with no pom.xml in it.
+4. Try running the android:undeploy-file goal, like this:
+
+mvn com.jayway.maven.plugins.android.generation2:maven-android-
+plugin:2.0.0-alpha3:undeploy-file -Dfile=maven-android-plugin-
+samples/apidemos-15/apidemos-15-platformtests/target/apidemos-15-
+platformtests-2.0.0-alpha3.apk
+
+&lt;b&gt;What is the expected output? What do you see instead?&lt;/b&gt;
+The plugin should look inside the apk and try undeploying it from a 
+connected device.
+
+Instead, I get this:
+
+[INFO] Scanning for projects...
+[INFO] --------------------------------------------------------------------
+----
+[INFO] Building Maven Default Project
+[INFO]    task-segment: 
+[com.jayway.maven.plugins.android.generation2:maven-android-plugin:2.0.0-
+alpha3:undeploy-file] (aggregator-style)
+[INFO] --------------------------------------------------------------------
+----
+[INFO] [android:undeploy-file]
+[INFO] --------------------------------------------------------------------
+----
+[ERROR] FATAL ERROR
+[INFO] --------------------------------------------------------------------
+----
+[INFO] null
+[INFO] --------------------------------------------------------------------
+----
+[INFO] Trace
+java.lang.NullPointerException
+        at 
+com.jayway.maven.plugins.android.AbstractAndroidMojo.extractPackageNameFrom
+Apk(AbstractAndroidMojo.java:274)
+        at 
+com.jayway.maven.plugins.android.AbstractAndroidMojo.undeployApk(AbstractAn
+droidMojo.java:218)
+        at 
+com.jayway.maven.plugins.android.AbstractAndroidMojo.undeployApk(AbstractAn
+droidMojo.java:205)
+        at 
+com.jayway.maven.plugins.android.standalonemojos.UndeployFileMojo.execute(U
+ndeployFileMojo.java:41)
+        at 
+org.apache.maven.plugin.DefaultPluginManager.executeMojo(DefaultPluginManag
+er.java:453)
+        at 
+org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoals(DefaultLif
+ecycleExecutor.java:559)
+        at 
+org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeStandaloneGoal(D
+efaultLifecycleExecutor.java:513)
+        at 
+org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoal(DefaultLife
+cycleExecutor.java:483)
+        at 
+org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeGoalAndHandleFai
+lures(DefaultLifecycleExecutor.java:331)
+        at 
+org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeTaskSegments(Def
+aultLifecycleExecutor.java:228)
+        at 
+org.apache.maven.lifecycle.DefaultLifecycleExecutor.execute(DefaultLifecycl
+eExecutor.java:142)
+        at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:336)
+        at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:129)
+        at org.apache.maven.cli.MavenCli.main(MavenCli.java:301)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at 
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:3
+9)
+        at 
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImp
+l.java:25)
+        at java.lang.reflect.Method.invoke(Method.java:597)
+        at 
+org.codehaus.classworlds.Launcher.launchEnhanced(Launcher.java:315)
+        at org.codehaus.classworlds.Launcher.launch(Launcher.java:255)
+        at 
+org.codehaus.classworlds.Launcher.mainWithExitCode(Launcher.java:430)
+        at org.codehaus.classworlds.Launcher.main(Launcher.java:375)
+[INFO] --------------------------------------------------------------------
+----
+[INFO] Total time: 4 seconds
+[INFO] Finished at: Thu Jun 18 21:30:20 CEST 2009
+[INFO] Final Memory: 14M/133M
+[INFO] --------------------------------------------------------------------
+----
+
+
+&lt;b&gt;What version of maven-android-plugin are you using?&lt;/b&gt;
+2.0.0-alpha3
+
+What is the output of &amp;quot;mvn -version&amp;quot; on your machine?
+Maven version: 2.0.10
+Java version: 1.6.0_13
+OS name: &amp;quot;linux&amp;quot; version: &amp;quot;2.6.28-11-generic&amp;quot; arch: &amp;quot;i386&amp;quot; Family: &amp;quot;unix&amp;quot;
+
+
+&lt;b&gt;Please use labels and text to provide additional information.&lt;/b&gt;
+
+The problem is that in AbstractAndroidMojo, the config parameter &amp;quot;sdk&amp;quot; is 
+only set to a non-null value if there is a pom.xml with an &amp;lt;sdk/&amp;gt; tag in 
+the plugin configuration. Right now, we get this NPE when trying to read 
+from the config parameter field we thought would refer to an Sdk 
+configuration object.</content><link rel='replies' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-android-plugin/issues/21/comments/full'/><link rel='alternate' type='text/html' href='http://code.google.com/p/maven-android-plugin/issues/detail?id=21'/><link rel='self' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-android-plugin/issues/full/21'/><author><name>hugo.josefson.old</name><uri>/u/hugo.josefson.old/</uri></author><issues:closedDate>2009-06-20T21:26:23.000Z</issues:closedDate><issues:id>21</issues:id><issues:label>Type-Defect</issues:label><issues:label>Priority-High</issues:label><issues:label>Milestone-2.0.0-alpha4</issues:label><issues:label>OpSys-All</issues:label><issues:label>Component-Standalone</issues:label><issues:owner><issues:uri>/u/hugo.josefson.old/</issues:uri><issues:username>hugo.josefson.old</issues:username></issues:owner><issues:stars>1</issues:stars><issues:state>closed</issues:state><issues:status>Verified</issues:status></entry><entry gd:etag='W/&quot;C0QMQn47eCl7ImA9WxJaFks.&quot;'><id>http://code.google.com/feeds/issues/p/maven-android-plugin/issues/full/22</id><published>2009-06-20T21:58:34.000Z</published><updated>2009-08-07T16:09:43.000Z</updated><title>mvn android:mavenize</title><content type='html'>&lt;b&gt;What steps will reproduce the problem?&lt;/b&gt;
+1. Be a new user.
+2. Try to figure out how to set up an Android application project.
+&lt;b&gt;3.&lt;/b&gt;
+
+What is the expected output?
+It should be very easy.
+
+What do you see instead?
+I have to read through the long GettingStarted page, understand how to create my pom.xml, and understand the directory layout.
+
+&lt;b&gt;What version of maven-android-plugin are you using?&lt;/b&gt;
+2.0.0-alpha4
+
+What is the output of &amp;quot;mvn -version&amp;quot; on your machine?
+Maven version: 2.0.10
+Java version: 1.6.0_13
+OS name: &amp;quot;linux&amp;quot; version: &amp;quot;2.6.28-11-generic&amp;quot; arch: &amp;quot;i386&amp;quot; Family: &amp;quot;unix&amp;quot;
+
+
+&lt;b&gt;Please use labels and text to provide additional information.&lt;/b&gt;
+
+Create a new goal named &amp;quot;mavenize&amp;quot;, which can take an existing project directory and:
+ * create a pom.xml
+ * restructure the directory to fit the desired layout
+
+It should take a config parameter &amp;quot;layout&amp;quot;, which tells the goal how to structure the directory. For example (some ideas):
+ * -Dandroid.layout=eclipse means to make the directory structure compatible with Eclipse.
+ * -Dandroid.layout=idea means to make the directory structure compatible with IntelliJ IDEA.
+ * -Dandroid.layout=maven means to make a fully mavenized directory structure, which obeys all Maven conventions, but probably isn't compatible with Eclipse.
+
+It should try to figure out the groupId and artifactId based on package name and any existing code, such as the main launcher Activity in AndroidManifest.xml.</content><link rel='replies' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-android-plugin/issues/22/comments/full'/><link rel='alternate' type='text/html' href='http://code.google.com/p/maven-android-plugin/issues/detail?id=22'/><link rel='self' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-android-plugin/issues/full/22'/><author><name>hugo.josefson.old</name><uri>/u/hugo.josefson.old/</uri></author><issues:id>22</issues:id><issues:label>Type-Enhancement</issues:label><issues:label>Priority-Low</issues:label><issues:label>OpSys-All</issues:label><issues:label>Usability</issues:label><issues:label>Component-Standalone</issues:label><issues:owner><issues:uri>/u/hugo.josefson.old/</issues:uri><issues:username>hugo.josefson.old</issues:username></issues:owner><issues:stars>4</issues:stars><issues:state>open</issues:state><issues:status>Accepted</issues:status></entry><entry gd:etag='W/&quot;C0MEQX47eCl7ImA9WxJWFUU.&quot;'><id>http://code.google.com/feeds/issues/p/maven-android-plugin/issues/full/23</id><published>2009-06-21T10:28:19.000Z</published><updated>2009-06-21T10:50:00.000Z</updated><title>PlatformTestMojo requires PATH</title><content type='html'>&lt;b&gt;What steps will reproduce the problem?&lt;/b&gt;
+1. Set up your development environment according to GettingStarted, without 
+setting PATH.
+2. Build and run through the Samples.
+&lt;b&gt;3.&lt;/b&gt;
+
+What is the expected output?
+It should work.
+
+What do you see instead?
+[INFO] [android:platformTest]
+[INFO] adb [shell, am, instrument, -w, 
+com.example.android.apis.tests/android.test.InstrumentationTestRunner]
+[ERROR] 'adb' is not recognized as an internal or external command,
+[ERROR] operable program or batch file.
+[ERROR]
+[ERROR] 'adb' is not recognized as an internal or external command,operable 
+program or batch file.
+[INFO] --------------------------------------------------------------------
+----
+[ERROR] BUILD FAILURE
+[INFO] --------------------------------------------------------------------
+----
+
+&lt;b&gt;What version of maven-android-plugin are you using?&lt;/b&gt;
+2.0.0-alpha4
+
+What is the output of &amp;quot;mvn -version&amp;quot; on your machine?
+Maven version: 2.0.9
+Java version: 1.6.0_14
+OS name: &amp;quot;windows xp&amp;quot; version: &amp;quot;5.1&amp;quot; arch: &amp;quot;x86&amp;quot; Family: &amp;quot;windows&amp;quot;
+
+&lt;b&gt;Please use labels and text to provide additional information.&lt;/b&gt;
+</content><link rel='replies' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-android-plugin/issues/23/comments/full'/><link rel='alternate' type='text/html' href='http://code.google.com/p/maven-android-plugin/issues/detail?id=23'/><link rel='self' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-android-plugin/issues/full/23'/><author><name>hugo.josefson.old</name><uri>/u/hugo.josefson.old/</uri></author><issues:closedDate>2009-06-21T10:50:00.000Z</issues:closedDate><issues:id>23</issues:id><issues:label>Type-Defect</issues:label><issues:label>Priority-High</issues:label><issues:label>OpSys-All</issues:label><issues:label>Milestone-2.0.0-alpha5</issues:label><issues:label>Component-Building</issues:label><issues:label>Component-Standalone</issues:label><issues:owner><issues:uri>/u/hugo.josefson.old/</issues:uri><issues:username>hugo.josefson.old</issues:username></issues:owner><issues:stars>1</issues:stars><issues:state>closed</issues:state><issues:status>Verified</issues:status></entry><entry gd:etag='W/&quot;C0ABQX47eCl7ImA9WxJWGEg.&quot;'><id>http://code.google.com/feeds/issues/p/maven-android-plugin/issues/full/24</id><published>2009-06-21T10:48:48.000Z</published><updated>2009-06-24T13:55:50.000Z</updated><title>mvn install fails on Windows for packaging=android:platformTest</title><content type='html'>&lt;b&gt;What steps will reproduce the problem?&lt;/b&gt;
+1. Download the samples 2.0.0-alpha4
+2. Set up environment variables according to http://code.google.com/p/maven-android-plugin/wiki/GettingStarted
+3. cd apidemos-15
+4. Update the poms to use maven-android-plugin 2.0.0-alpha5-SNAPSHOT.
+5. mvn install
+
+
+What is the expected output?
+It should build and install the samples. Then it should install the apk files to ~/.m2/repository/...
+
+What do you see instead?
+When it tries to install the apidemos-15-platformtest apk to ~/.m2/repository, it fails. The problem is that &amp;lt;packaging&amp;gt;android:apk:platformTest&amp;lt;/packaging&amp;gt; contains a &amp;quot;:&amp;quot;, which is not valid for filenames in Windows.
+
+[INFO] [install:install]
+[INFO] Installing C:\java\maven-android-plugin-samples\apidemos-15\apidemos-15-platformtests\target\apidemos-15-platformtests-2.0.0-alpha4.apk to C:\Documents and 
+Settings\Administrator\.m2\repository\com\jayway\maven\plugins\android\generation2\samples\apidemos-15\apidemos-15-platformtests\2.0.0-alpha4\apidemos-15-platformtests-2.0.0-alpha4.android:apk:platformTest
+[INFO] ------------------------------------------------------------------------
+[ERROR] BUILD ERROR
+[INFO] ------------------------------------------------------------------------
+[INFO] Error installing artifact: The filename, directory name, or volume label syntax is incorrect
+
+
+&lt;b&gt;What version of maven-android-plugin are you using?&lt;/b&gt;
+2.0.0-alpha5-SNAPSHOT
+
+What is the output of &amp;quot;mvn -version&amp;quot; on your machine?
+Maven version: 2.0.9
+Java version: 1.6.0_14
+OS name: &amp;quot;windows xp&amp;quot; version: &amp;quot;5.1&amp;quot; arch: &amp;quot;x86&amp;quot; Family: &amp;quot;windows&amp;quot;
+
+&lt;b&gt;Please use labels and text to provide additional information.&lt;/b&gt;
+</content><link rel='replies' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-android-plugin/issues/24/comments/full'/><link rel='alternate' type='text/html' href='http://code.google.com/p/maven-android-plugin/issues/detail?id=24'/><link rel='self' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-android-plugin/issues/full/24'/><author><name>hugo.josefson.old</name><uri>/u/hugo.josefson.old/</uri></author><issues:closedDate>2009-06-24T13:55:50.000Z</issues:closedDate><issues:id>24</issues:id><issues:label>Type-Defect</issues:label><issues:label>Priority-High</issues:label><issues:label>OpSys-Windows</issues:label><issues:label>Milestone-2.0.0-alpha6</issues:label><issues:label>Component-Building</issues:label><issues:label>Compatibility</issues:label><issues:owner><issues:uri>/u/hugo.josefson.old/</issues:uri><issues:username>hugo.josefson.old</issues:username></issues:owner><issues:stars>1</issues:stars><issues:state>closed</issues:state><issues:status>Verified</issues:status></entry><entry gd:etag='W/&quot;C0AGQ347eCl7ImA9WxJWGEg.&quot;'><id>http://code.google.com/feeds/issues/p/maven-android-plugin/issues/full/25</id><published>2009-06-23T08:32:23.000Z</published><updated>2009-06-24T13:55:22.000Z</updated><title>mvn android:deploy doesn't work</title><content type='html'>&lt;b&gt;What steps will reproduce the problem?&lt;/b&gt;
+1. mvn install
+2. mvn deploy
+&lt;b&gt;3.&lt;/b&gt;
+
+&lt;b&gt;What is the expected output?&lt;/b&gt;
+Should deploy the built apk to device.
+
+&lt;b&gt;What do you see instead?&lt;/b&gt;
+[INFO] Scanning for projects...
+[INFO] Searching repository for plugin with prefix: 'android'.
+[INFO] --------------------------------------------------------------------
+----
+[INFO] Building My Project Name
+[INFO]    task-segment: [android:deploy]
+[INFO] --------------------------------------------------------------------
+----
+[INFO] [android:deploy]
+[INFO] --------------------------------------------------------------------
+----
+[INFO] BUILD SUCCESSFUL
+[INFO] --------------------------------------------------------------------
+----
+[INFO] Total time: 5 seconds
+[INFO] Finished at: Tue Jun 23 10:30:57 CEST 2009
+[INFO] Final Memory: 14M/133M
+[INFO] --------------------------------------------------------------------
+----
+
+
+&lt;b&gt;What version of maven-android-plugin are you using?&lt;/b&gt;
+2.0.0-alpha6-SNAPSHOT
+
+What is the output of &amp;quot;mvn -version&amp;quot; on your machine?
+Maven version: 2.0.10
+Java version: 1.6.0_13
+OS name: &amp;quot;linux&amp;quot; version: &amp;quot;2.6.28-13-generic&amp;quot; arch: &amp;quot;i386&amp;quot; Family: &amp;quot;unix&amp;quot;
+
+
+&lt;b&gt;Please use labels and text to provide additional information.&lt;/b&gt;
+</content><link rel='replies' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-android-plugin/issues/25/comments/full'/><link rel='alternate' type='text/html' href='http://code.google.com/p/maven-android-plugin/issues/detail?id=25'/><link rel='self' type='application/atom+xml' href='http://code.google.com/feeds/issues/p/maven-android-plugin/issues/full/25'/><author><name>hugo.josefson.old</name><uri>/u/hugo.josefson.old/</uri></author><issues:closedDate>2009-06-24T13:55:22.000Z</issues:closedDate><issues:id>25</issues:id><issues:label>Type-Defect</issues:label><issues:label>Priority-High</issues:label><issues:label>OpSys-All</issues:label><issues:label>Milestone-2.0.0-alpha7</issues:label><issues:label>Component-Device</issues:label><issues:label>Component-Building</issues:label><issues:label>Component-Standalone</issues:label><issues:owner><issues:uri>/u/hugo.josefson.old/</issues:uri><issues:username>hugo.josefson.old</issues:username></issues:owner><issues:stars>1</issues:stars><issues:state>closed</issues:state><issues:status>Verified</issues:status></entry></feed>
