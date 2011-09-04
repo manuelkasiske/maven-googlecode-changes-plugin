@@ -74,16 +74,16 @@ public class CreateReportMojo extends AbstractMojo
 	 *            expression="${projectIdentifier}"
 	 * @required
 	 */
-
 	private String projectIdentifier;
+
 	/**
 	 * Project version.
 	 * 
 	 * @parameter default-value="${project.version}" expression="${milestone}"
 	 * @required
 	 */
-
 	private String milestone;
+
 	/**
 	 * Path of the changes.xml that will be generated.
 	 * 
@@ -91,8 +91,8 @@ public class CreateReportMojo extends AbstractMojo
 	 *            expression="${xmlPath}"
 	 * @required
 	 */
-
 	private File xmlPath;
+
 	/**
 	 * Mapping between changes.xml action types and googlecode issue types. All
 	 * your own Trackers fields should be mapped to one of: add, fix, remove,
@@ -168,6 +168,7 @@ public class CreateReportMojo extends AbstractMojo
 		}
 		catch (Exception e)
 		{
+			getLog().error(e);
 			throw new MojoExecutionException(e.getMessage());
 		}
 	}
