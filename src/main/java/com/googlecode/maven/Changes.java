@@ -48,8 +48,18 @@ public final class Changes
 
 	private static Element addReleaseSection(final Element element, final Release release)
 	{
-		return element.addElement("release").addAttribute("date", release.getDateRelease()).addAttribute("version", release.getVersion())
-				.addAttribute("description", release.getDescription());
+		if (element != null)
+		{
+			if (release != null)
+			{
+				element.addElement("release");
+				element.addAttribute("date", release.getDateRelease());
+				element.addAttribute("version", release.getVersion());
+				element.addAttribute("description", release.getDescription());
+			}
+		}
+
+		return element;
 	}
 
 	/**
@@ -67,6 +77,7 @@ public final class Changes
 	{
 		final Document document;
 		final Element releaseElement;
+
 		if (!xmlPath.exists())
 		{
 			log.info("Creating file <" + xmlPath + ">");
@@ -98,6 +109,7 @@ public final class Changes
 		else
 		{
 			log.info("Reuse existing file <" + xmlPath + ">");
+	
 			try
 			{
 				document = new SAXReader().read(xmlPath);
@@ -106,6 +118,7 @@ public final class Changes
 			{
 				throw new MojoFailureException(e.getMessage());
 			}
+
 			if (document.selectSingleNode("/document/body/release[@version='" + release.getVersion() + "']") != null)
 			{
 				log.debug("Using existing release node for version <" + release.getVersion() + ">");
