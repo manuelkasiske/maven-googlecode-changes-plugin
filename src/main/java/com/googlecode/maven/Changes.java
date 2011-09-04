@@ -30,6 +30,7 @@ import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.DocumentFactory;
 import org.dom4j.Element;
+import org.dom4j.Node;
 import org.dom4j.QName;
 import org.dom4j.io.OutputFormat;
 import org.dom4j.io.SAXReader;
@@ -42,23 +43,37 @@ import org.dom4j.io.XMLWriter;
  */
 public final class Changes
 {
+	private static Log log;
+
 	private Changes()
 	{
 	}
 
+	private static Log getLog()
+	{
+		return log;
+	}
+
+	private static void setLog(Log log)
+	{
+		Changes.log = log;
+	}
+
 	private static Element addReleaseSection(final Element element, final Release release)
 	{
+		getLog().debug("addReleaseSection(" + element + ", " + release + ")");
 		if (element != null)
 		{
 			if (release != null)
 			{
-				element.addElement("release");
-				element.addAttribute("date", release.getDateRelease());
-				element.addAttribute("version", release.getVersion());
-				element.addAttribute("description", release.getDescription());
+				Element temp = element.addElement("release");
+				temp.addAttribute("date", release.getDateRelease());
+				temp.addAttribute("version", release.getVersion());
+				temp.addAttribute("description", release.getDescription());
 			}
 		}
 
+		getLog().debug("addReleaseSection: returning " + element);
 		return element;
 	}
 
@@ -78,9 +93,11 @@ public final class Changes
 		final Document document;
 		final Element releaseElement;
 
+		setLog(log);
+
 		if (!xmlPath.exists())
 		{
-			log.info("Creating file <" + xmlPath + ">");
+			getLog().info("Creating file <" + xmlPath + ">");
 			try
 			{
 				xmlPath.getParentFile().mkdirs();
@@ -108,8 +125,8 @@ public final class Changes
 		}
 		else
 		{
-			log.info("Reuse existing file <" + xmlPath + ">");
-	
+			getLog().info("Reuse existing file <" + xmlPath + ">");
+
 			try
 			{
 				document = new SAXReader().read(xmlPath);
@@ -119,14 +136,16 @@ public final class Changes
 				throw new MojoFailureException(e.getMessage());
 			}
 
-			if (document.selectSingleNode("/document/body/release[@version='" + release.getVersion() + "']") != null)
+			Node releaseNode = document.selectSingleNode("/document/body/release[@version='" + release.getVersion() + "']");
+			if (releaseNode != null)
 			{
-				log.debug("Using existing release node for version <" + release.getVersion() + ">");
-				releaseElement = Element.class.cast(document.selectSingleNode("/document/body/release[@version='" + release.getVersion() + "']"));
+				getLog().debug("Using existing release node for version <" + release.getVersion() + ">");
+				releaseElement = Element.class.cast(releaseNode);
 			}
 			else
 			{
-				log.debug("Creating new release node for version <" + release.getVersion() + ">");
+				// TODO: Make creation of new body nodes more stable
+				getLog().debug("Creating new release node for version <" + release.getVersion() + ">");
 				if (document.selectSingleNode("/document/body") == null)
 				{
 					final Element documentElement;
@@ -140,26 +159,41 @@ public final class Changes
 					}
 					documentElement.addElement("body");
 				}
-				releaseElement = addReleaseSection(Element.class.cast(document.selectSingleNode("/document/body")), release);
+
+				Element bodyElement = Element.class.cast(document.selectSingleNode("/document/body"));
+				getLog().debug("new file, calling addReleaseSection(" + bodyElement + ", " + release + ")");
+
+				releaseElement = addReleaseSection(bodyElement, release);
 			}
 		}
+
+		getLog().debug("releaseElement: " + releaseElement);
 
 		if (release.getActions() != null)
 		{
 			for (final Object object : release.getActions())
 			{
 				final Action action = Action.class.cast(object);
-				if (action.getIssue() == null
-						|| document.selectSingleNode("/document/body/release[@version='" + release.getVersion() + "']/action[@issue='"
-								+ action.getIssue() + "']") == null)
+				getLog().debug("Action " + action.getIssue() + " : " + action.getAction());
+
+				Node actionNode = document.selectSingleNode("/document/body/release[@version='" + release.getVersion() + "']/action[@issue='"
+						+ action.getIssue() + "']");
+				if (action.getIssue() == null || actionNode == null)
 				{
-					releaseElement.addElement("action").addAttribute("dev", action.getDev()).addAttribute("type", action.getType())
-							.addAttribute("due-to", action.getDueTo()).addAttribute("due-to-email", action.getDueToEmail())
-							.addAttribute("issue", action.getIssue()).addText(action.getAction());
+					if (releaseElement != null)
+					{
+						Element actionElement = releaseElement.addElement("action");
+						actionElement.addAttribute("dev", action.getDev());
+						actionElement.addAttribute("type", action.getType());
+						actionElement.addAttribute("due-to", action.getDueTo());
+						actionElement.addAttribute("due-to-email", action.getDueToEmail());
+						actionElement.addAttribute("issue", action.getIssue());
+						actionElement.addText(action.getAction());
+					}
 				}
 				else
 				{
-					log.warn("Action <" + action.getIssue() + "> already exists; skipping");
+					getLog().warn("Action <" + action.getIssue() + "> already exists; skipping");
 				}
 			}
 		}

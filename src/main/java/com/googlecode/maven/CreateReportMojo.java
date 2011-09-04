@@ -104,6 +104,9 @@ public class CreateReportMojo extends AbstractMojo
 	 */
 	private Map<String, String> issueTypes;
 
+	/**
+	 * {@inheritDoc}
+	 */
 	public void execute() throws MojoExecutionException, MojoFailureException
 	{
 		try
@@ -115,7 +118,10 @@ public class CreateReportMojo extends AbstractMojo
 			}
 
 			final URL feedUrl = new URL("http://code.google.com/feeds/issues/p/" + this.projectIdentifier + "/issues/full");
+			getLog().debug(feedUrl.toString());
+
 			final IssuesQuery query = new IssuesQuery(feedUrl);
+			// TODO: Here is the place for issue 2
 			query.setLabel(CreateReportMojo.MILESTONE_LABEL + "1_0_RC");
 			query.setMaxResults(Integer.MAX_VALUE);
 
@@ -134,6 +140,10 @@ public class CreateReportMojo extends AbstractMojo
 			final List<Action> actions = new LinkedList<Action>();
 			for (final IssuesEntry issue : issues.getEntries())
 			{
+				getLog().debug(issue.toString());
+				getLog().debug("  Issue " + issue.getId() + " : " + issue.getTitle().getPlainText());
+
+				// TODO: config option whether we want only closed issues...
 				if (!State.Value.CLOSED.equals(issue.getState().getValue()))
 				{
 					continue;
@@ -157,13 +167,23 @@ public class CreateReportMojo extends AbstractMojo
 					continue;
 				}
 
-				action.setIssue(issue.getVersionId());
+				if (issue.getVersionId() == null)
+				{
+					action.setIssue("unknown");
+				}
+				else
+				{
+					action.setIssue(issue.getVersionId());
+				}
+
 				action.setAction(issue.getIssueId().getValue() + ": " + issue.getTitle().getPlainText());
 
+				getLog().debug("Action " + action.getIssue() + " : " + action.getAction());
 				actions.add(action);
 			}
 
 			release.setActions(actions);
+			getLog().debug("Release action length: " + release.getActions().size());
 
 			Changes.generate(release, this.xmlPath, getLog());
 		}
