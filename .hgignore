@@ -8,3 +8,4 @@ syntax: glob
 .settings
 target
 build.xml
+**/build.log

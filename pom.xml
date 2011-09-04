@@ -96,6 +96,7 @@
 			<artifactId>maven-changes-plugin</artifactId>
 			<version>2.3</version>
 		</dependency>
+
 	</dependencies>
 
 	<developers>
@@ -168,6 +169,21 @@
 					</execution>
 				</executions>
 			</plugin>
+
+			<!-- issue 11: run integration tests -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>shitty-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<goals>
+							<goal>clean</goal>
+							<goal>install</goal>
+							<goal>test</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 		<extensions>
 			<extension>
@@ -199,4 +215,5 @@
 			</distributionManagement>
 		</profile>
 	</profiles>
+
 </project>
