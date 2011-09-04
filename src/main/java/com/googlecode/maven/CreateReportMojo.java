@@ -87,7 +87,8 @@ public class CreateReportMojo extends AbstractMojo
 	/**
 	 * Path of the changes.xml that will be generated.
 	 * 
-	 * @parameter default-value="${basedir}/src/changes/changes.xml"
+	 * @parameter 
+	 *            default-value="${basedir}/target/generated-changes/changes.xml"
 	 *            expression="${xmlPath}"
 	 * @required
 	 */
