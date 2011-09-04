@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faqs xmlns="http://maven.apache.org/FML/1.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/FML/1.0.1 http://maven.apache.org/xsd/fml-1.0.1.xsd" title="Frequently Asked Questions"
+	toplink="false">
+
+	<part id="general">
+		<title>General</title>
+
+		<faq id="why-was-the-groupid-changes">
+			<question>
+				Why was the groupId changed?
+      		</question>
+			<answer>
+				<p>
+					com.googlecode was too general (see
+					<a href="https://docs.sonatype.org/display/Repository/Choosing+your+Coordinates">Choosing your Coordinates</a>
+					and
+					<a href="https://issues.sonatype.org/browse/OSSRH-1586">answer from Juven Xu</a>
+					to the
+					<a href="http://code.google.com/p/plsqlgateway/">plsqlgateway</a>
+					guys).
+				</p>
+			</answer>
+		</faq>
+
+		<faq id="why-no-maven-at-the-beginning">
+			<question>So, why is it not called "maven-&lt;foo&gt;-plugin" anymore?</question>
+			<answer>
+				<p>
+					Because the
+					<a href="http://maven.apache.org/plugins/maven-plugin-plugin/">maven-plugin-plugin</a>
+					complains that the maven-&lt;foo&gt;-plugin namespace belongs to the
+					<a href="http://maven.apache.org/">Apache Maven Project</a>
+					.
+				</p>
+			</answer>
+		</faq>
+	</part>
+
+</faqs>
