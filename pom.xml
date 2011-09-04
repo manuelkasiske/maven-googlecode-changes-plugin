@@ -169,17 +169,26 @@
 					</execution>
 				</executions>
 			</plugin>
-
 			<!-- issue 11: run integration tests -->
 			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>shitty-maven-plugin</artifactId>
+				<artifactId>maven-invoker-plugin</artifactId>
+				<version>1.5</version>
+				<configuration>
+					<projectsDirectory>src/it</projectsDirectory>
+					<cloneProjectsTo>${project.build.directory}/it</cloneProjectsTo>
+					<pomIncludes>
+						<pomInclude>*/pom.xml</pomInclude>
+					</pomIncludes>
+					<settingsFile>src/it/settings.xml</settingsFile>
+					<localRepositoryPath>${project.build.directory}/local-repo</localRepositoryPath>
+					<postBuildHookScript>verify.bsh</postBuildHookScript>
+				</configuration>
 				<executions>
 					<execution>
+						<id>integration-test</id>
 						<goals>
-							<goal>clean</goal>
 							<goal>install</goal>
-							<goal>test</goal>
+							<goal>run</goal>
 						</goals>
 					</execution>
 				</executions>
