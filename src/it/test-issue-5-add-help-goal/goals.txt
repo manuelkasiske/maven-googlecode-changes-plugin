@@ -1,1 +1,1 @@
-clean com.googlecode:maven-googlecode-changes-plugin:1.1-SNAPSHOT:help
+${pom.groupId}:${pom.artifactId}:${pom.version}:help
