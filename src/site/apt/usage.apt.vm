@@ -1,0 +1,27 @@
+ -----
+ Usage
+ -----
+ Hakan Tandogan
+ ------
+ 2011-09-04
+ ------
+ 
+Main Topic 
+
+* Report Usage
+
+  To add these reports to your project's site, add the following snippet to your POM: 
+
+ +---+
+ <build>
+  <plugins>
+    <plugin>
+      <groupId>com.googlecode.googlecode-changes-maven-plugin</groupId>
+      <artifactId>googlecode-changes-maven-plugin</artifactId>
+      <version>${pluginVersion}</version>
+    </plugin>
+  </plugins>
+</build>
++---+
+ 
+ 
