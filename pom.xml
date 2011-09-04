@@ -4,7 +4,13 @@
 
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.googlecode</groupId>
+	<parent>
+		<groupId>org.sonatype.oss</groupId>
+		<artifactId>oss-parent</artifactId>
+		<version>7</version>
+	</parent>
+
+	<groupId>com.googlecode.maven-googlecode-changes-plugin</groupId>
 	<artifactId>maven-googlecode-changes-plugin</artifactId>
 	<packaging>maven-plugin</packaging>
 	<version>1.1-SNAPSHOT</version>
