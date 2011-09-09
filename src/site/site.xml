@@ -14,6 +14,10 @@
 			<item name="Changes" href="changes-report.html" />
 		</menu>
 
+		<menu name="Examples">
+			<item name="Keep Docck happy" href="examples/keep-docck-happy.html" />
+		</menu>
+
 		<menu ref="parent" />
 		<menu ref="modules" />
 		<menu ref="reports" />
