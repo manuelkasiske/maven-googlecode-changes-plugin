@@ -1,7 +1,7 @@
 /**
  * Copyright 2010.
  *
- * This file is part of maven-googlecode-changes-plugin.
+ * This file is part of googlecode-changes-maven-plugin.
  *
  * This is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by

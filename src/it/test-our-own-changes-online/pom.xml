@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.googlecode.maven-googlecode-changes-plugin.it</groupId>
+	<groupId>com.googlecode.googlecode-changes-maven-plugin.it</groupId>
 	<artifactId>test-issue-5-help-goal</artifactId>
 	<packaging>pom</packaging>
 	<version>@project.version@</version>
@@ -14,7 +14,7 @@
 
 			<plugin>
 				<groupId>com.googlecode</groupId>
-				<artifactId>maven-googlecode-changes-plugin</artifactId>
+				<artifactId>googlecode-changes-maven-plugin</artifactId>
 				<version>@project.version@</version>
 				<executions>
 					<execution>
