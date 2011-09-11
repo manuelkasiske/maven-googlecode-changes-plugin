@@ -18,6 +18,10 @@
 			<item name="Keep Docck happy" href="examples/keep-docck-happy.html" />
 		</menu>
 
+		<menu name="Statistics">
+			<item name="OhLoh" href="ohloh.html" />
+		</menu>
+
 		<menu ref="parent" />
 		<menu ref="modules" />
 		<menu ref="reports" />
