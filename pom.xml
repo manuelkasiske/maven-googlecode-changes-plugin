@@ -234,19 +234,6 @@
 					</execution>
 				</executions>
 			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-docck-plugin</artifactId>
-				<!--
-				<executions>
-					<execution>
-						<goals>
-							<goal>check</goal>
-						</goals>
-					</execution>
-				</executions>
-				-->
-			</plugin>
 		</plugins>
 		<extensions>
 			<extension>
@@ -311,6 +298,23 @@
 					<url>scm:hg:https://site.maven-googlecode-changes-plugin.googlecode.com/hg</url>
 				</site>
 			</distributionManagement>
+
+
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-docck-plugin</artifactId>
+						<executions>
+							<execution>
+								<goals>
+									<goal>check</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
 		</profile>
 	</profiles>
 
