@@ -49,7 +49,9 @@
 
 	<mailingLists>
 		<mailingList>
-			<name>None, sorry</name>
+			<name>General Discussion at groups.google.com</name>
+			<post>googlecode-changes-maven-plugin@googlegroups.com</post>
+			<archive>http://groups.google.com/group/googlecode-changes-maven-plugin</archive>
 		</mailingList>
 	</mailingLists>
 
