@@ -56,10 +56,6 @@
 	</mailingLists>
 
 	<distributionManagement>
-		<repository>
-			<id>java.net-m2-repository</id>
-			<url>java-net:/maven2-repository/trunk/repository/</url>
-		</repository>
 		<site>
 			<id>local</id>
 			<url>file:target/site-staged</url>
