@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<document xmlns="http://maven.apache.org/XDOC/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/XDOC/2.0 http://maven.apache.org/xsd/xdoc-2.0.xsd">
+
+	<head>
+		<!-- <title>${project.name}</title> -->
+		<title>Maven Googlecode changes support - Donations</title>
+<script type="text/javascript">
+/* <![CDATA[ */
+    (function() {
+        var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
+        t.parentNode.insertBefore(s, t);
+    })();
+/* ]]> */
+</script>
+	</head>
+
+	<body>
+		<section name="Flattr">
+			<subsection name="Flattr us :-)">
+<a class="FlattrButton" style="display:none;" href="http://code.google.com/p/maven-googlecode-changes-plugin/"></a>
+<noscript><a href="http://flattr.com/thing/393985/maven-changes-plugin-extension-generating-changes-xml-file-from-googlecodes-project-issues" target="_blank">
+<img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" /></a></noscript>
+			</subsection>
+			<subsection name="Bitcoins">
+				No clue how this works :-)
+			</subsection>
+			<subsection name="Paypal">
+				No clue for this, either :-)
+			</subsection>
+		</section>
+	</body>
+
+</document>
