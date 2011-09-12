@@ -85,6 +85,13 @@ public class CreateReportMojo extends AbstractMojo
 	private String milestone;
 
 	/**
+	 * Remove -SNAPSHOT from default project version
+	 * 
+	 * @parameter default-value="true" expression="${removeSnapshot}"
+	 */
+	private Boolean removeSnapshot;
+
+	/**
 	 * Feed URL
 	 * 
 	 * @parameter expression="${feedUrl}"
@@ -130,6 +137,20 @@ public class CreateReportMojo extends AbstractMojo
 			}
 
 			getLog().debug("Project Feed from " + feedUrl.toString());
+
+			if (Boolean.TRUE == removeSnapshot)
+			{
+				if (milestone != null)
+				{
+					int snapshotIndex = milestone.indexOf("-SNAPSHOT");
+					if (snapshotIndex > 0)
+					{
+						milestone = milestone.substring(0, snapshotIndex);
+					}
+				}
+			}
+
+			getLog().debug("Milestone: " + milestone);
 
 			final IssuesQuery query = new IssuesQuery(feedUrl);
 			// TODO: Here is the place for issue 2
