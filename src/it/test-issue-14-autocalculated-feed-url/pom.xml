@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>@project.groupId@.it</groupId>
+	<artifactId>test-issue-14-explicit-feed-url</artifactId>
+	<packaging>pom</packaging>
+	<version>@project.version@</version>
+
+	<build>
+
+		<plugins>
+
+			<plugin>
+				<groupId>@project.groupId@</groupId>
+				<artifactId>@project.artifactId@</artifactId>
+				<version>@project.version@</version>
+				<executions>
+					<execution>
+						<id>create-report</id>
+						<phase>pre-site</phase>
+						<goals>
+							<goal>create-report</goal>
+						</goals>
+						<configuration>
+							<issueTypes>
+								<Defect>fix</Defect>
+								<Enhancement>update</Enhancement>
+							</issueTypes>
+							<projectIdentifier>maven-googlecode-changes-plugin</projectIdentifier>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+		</plugins>
+	</build>
+</project>

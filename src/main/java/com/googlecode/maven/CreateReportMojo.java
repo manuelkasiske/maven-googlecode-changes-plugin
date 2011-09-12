@@ -85,6 +85,13 @@ public class CreateReportMojo extends AbstractMojo
 	private String milestone;
 
 	/**
+	 * Feed URL
+	 * 
+	 * @parameter expression="${feedUrl}"
+	 */
+	private URL feedUrl;
+
+	/**
 	 * Path of the changes.xml that will be generated.
 	 * 
 	 * @parameter 
@@ -117,8 +124,12 @@ public class CreateReportMojo extends AbstractMojo
 				service.setUserCredentials(this.username, this.password);
 			}
 
-			final URL feedUrl = new URL("http://code.google.com/feeds/issues/p/" + this.projectIdentifier + "/issues/full");
-			getLog().debug(feedUrl.toString());
+			if (feedUrl == null)
+			{
+				feedUrl = new URL("http://code.google.com/feeds/issues/p/" + projectIdentifier + "/issues/full");
+			}
+
+			getLog().debug("Project Feed from " + feedUrl.toString());
 
 			final IssuesQuery query = new IssuesQuery(feedUrl);
 			// TODO: Here is the place for issue 2
